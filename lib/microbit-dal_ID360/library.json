@@ -1,0 +1,35 @@
+{
+    "name": "microbit-dal",
+    "version": "2.0.0-rc4.build7",
+    "keywords": "microbit, framework, bbc",
+    "description": "The core set of drivers, mechanisms and types that make up the micro:bit runtime.",
+    "authors": {
+        "name": "Lancaster University",
+        "url": "https://github.com/lancaster-university"
+    },
+    "repository":
+    {
+        "type": "git",
+        "url": "https://github.com/ivankravets/microbit-dal.git",
+        "branch": "platformio-3.0"
+    },
+    "dependencies": {
+        "ble": "https://github.com/lancaster-university/BLE_API#v2.5.0+mb3",
+        "ble-nrf51822": "https://github.com/ivankravets/nRF51822.git",
+        "nrf51-sdk": "https://github.com/palfrey/nrf51-sdk#platformio-3.0"
+    },
+    "build":
+    {
+      "flags": [
+        "-Iinc/core",
+        "-Iinc/types",
+        "-Iinc/drivers",
+        "-Iinc/bluetooth",
+        "-Iinc/platform"
+      ],
+      "extraScript": "platformio_extra.py"
+    },
+    "url": "https://github.com/lancaster-university/microbit-dal",
+    "frameworks": "mbed",
+    "platforms": "nordicnrf51"
+}
